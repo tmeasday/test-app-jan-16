@@ -7,7 +7,11 @@ import { isChromatic } from 'storybook-chromatic';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-const url = URL.createObjectURL(new Image());
+const url = URL.createObjectURL(
+  new File(['foo'], 'foo.txt', {
+    type: 'text/plain',
+  })
+);
 URL.revokeObjectURL(url);
 new MutationObserver(() => 0);
 
