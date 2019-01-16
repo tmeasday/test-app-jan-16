@@ -11,7 +11,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "CHROMATIC_INDEX_URL=https://staging-www.chromaticqa.com chromatic test -a cgaw4r7rw9"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +24,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.6",
+    "@storybook/addon-links": "^4.1.6",
+    "@storybook/addons": "^4.1.6",
+    "@storybook/react": "^4.1.6",
+    "babel-loader": "^8.0.5",
+    "storybook-chromatic": "^1.2.3"
+  }
 }
