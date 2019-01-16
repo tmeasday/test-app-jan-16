@@ -7,8 +7,8 @@ import { isChromatic } from 'storybook-chromatic';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-URL.createObjectURL('foo', 'bar');
-URL.revokeObjectURL('foo', 'bar');
+const url = URL.createObjectURL(new Image());
+URL.revokeObjectURL(url);
 new MutationObserver(() => 0);
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
